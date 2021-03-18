@@ -1,5 +1,7 @@
+//Create pokemonList array
 let pokemonList = [];
 
+//Define pokemon objects
 let pokemon1 = {
   name: 'Bulbasaur',
   height: 0.7,
@@ -18,4 +20,18 @@ let pokemon3 = {
   type: 'Grass/Poison'
 };
 
+//Add pokemon objects into pokemonList array
 pokemonList.push(pokemon1, pokemon2, pokemon3);
+
+let pokemonPrint = '';
+
+for (i = 0; i < pokemonList.length; i++)
+{
+  pokemonPrint = pokemonList[i].name + '[' + pokemonList[i].type + '] ' + '(height: ' + pokemonList[i].height + ')';
+  if (pokemonList[i].height > 1){
+    document.write(pokemonPrint + ' - Wow, that\'s big!<br>');
+  }
+  else {
+    document.write(pokemonPrint + "<br>");
+  }
+}
