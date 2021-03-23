@@ -23,15 +23,13 @@ let pokemon3 = {
 //Add pokemon objects into pokemonList array
 pokemonList.push(pokemon1, pokemon2, pokemon3);
 
-let pokemonPrint = '';
+pokemonList.forEach(function(pokemon) {
+  let pokemonPrint = pokemon.name + '[' + pokemon.type + '] ' + '(height: ' + pokemon.height + ')';;
 
-for (i = 0; i < pokemonList.length; i++)
-{
-  pokemonPrint = pokemonList[i].name + '[' + pokemonList[i].type + '] ' + '(height: ' + pokemonList[i].height + ')';
-  if (pokemonList[i].height > 1){
+  if (pokemon.height > 1){
     document.write(pokemonPrint + ' - Wow, that\'s big!<br>');
   }
   else {
     document.write(pokemonPrint + "<br>");
   }
-}
+});
